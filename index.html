@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration-form</title>
+    <style>
+        .formarea {
+            border: 3.5px solid black;
+            text-align: left;
+            margin: 100px;
+            margin-left: 100px;
+            margin-right: 200px;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: whitesmoke;
+            max-width: 750px;
+        }
+        .container {
+            max-width: 700px;
+            height: 70px;
+            padding: 15px;
+            margin: auto;
+        }
+        .flex-container {
+            display: flex;
+        }
+        .flex-container>div {
+            margin: 2px;
+            padding: 30px;
+            font-size: 50px;
+        }
+        .required {
+            color: maroon;
+        }
+        #input-box {
+            width: 350px;
+            /* Adjust width as needed */
+            height: 100px;
+            /* Adjust height as needed */
+            padding: 10px;
+            /* Add padding as needed */
+            border: 10px solid black
+                /* Add border as needed */
+                border-radius1 10px;
+            /* Add border radius as needed */
+            box-sizing: border-box;
+            /* Include padding and border in total width/height */
+        }
+    </style>
+</head>
+<body>
+    <form action="submit-email.php" method="post">
+        <div class="formarea">
+            <h1 style="text-align:left;">Student Regisration form</h1>
+            <p>Fill out the form carefully for registration</p>
+            <h3>STUDENT NAME</h3>
+            <div id="input-box">
+                <div class="flex-container">
+                    <input type="text" id="fname" name="fname" maxlength="20" required><br>
+                    <label for="First Name" class="required">First Name<br></label>
+                    <input type="text" maxlength="20" required><br>
+                    <label for="Middle Name" class="required">Middle Name</label>
+                    <input type="text" maxlength="20" required pattern="alphabet">
+                    <label for="Last Name" class="required">Last Name</label>
+                    <br>
+                </div>
+            </div>
+            <div class="container">
+                <label for="Date of birth" class="required">Date of birth</label><br>
+                <select id="birth-month" required>
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <input type="number" id="birth-day" min="1" max="31" required>
+                <input type="number" id="birth-year" min="1970" max="2024" required>
+                <br>
+                <label for="Gender" class="required">Gender</label><br>
+                <select id="subject" name="subject" required>
+                    <option value="">please select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <label for="Address" class="required"> Address<br></label>
+            <input type="text" id="address" maxlength="250" required>
+            <br>
+            <label for="Address" class="required"> st Address<br></label>
+            <input type="text" id="address" maxlength="250" required>
+            <br>
+            <label for="Address" class="required"> St Address line 2<br></label>
+            <input type="text" id="address" maxlength="250" required>
+            <br>
+            <div class="container">
+                <div class="flex-container">
+                    <input type="text" maxlength="50" required><br>
+                    <label for="city" class="required">city</label>
+                    <br>
+                    <input type="text" maxlength="50" required><br>
+                    <label for="state" class="required">state/province</label>
+                    <br>
+                </div>
+            </div>
+            <label for="Zip-code" class="required">Zip-code</label>
+            <input type="text" maxlength="5" required pattern="[0-9]{5}">
+            <br>
+            <div class="container">
+                <div class="flex-container">
+                    <lable for="email" class="required">email</lable>
+                    <input type="email" maxlength="250" placeholder="ex:myname@example.com" required>
+                    <label for="Phone number">Mobile number</label><br>
+                    <input type="tel" placeholder="(000)0000-0000">
+                    <br>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex-container">
+                    <label for="Mobile number">Phone number</label><br>
+                    <input type="tel" maxlength="12" pattern="[0-9]{12}" placeholder="(000)0000-0000">
+                    <br>
+                    <label for="work number">Work number</label><br>
+                    <input type="tel" maxlength="12" pattern="[0-9]{12}" placeholder="(000)0000-0000">
+                    <br>
+                </div>
+            </div>
+            <label for="company" class="required">Company:</label><br>
+            <input type="text" maxlength="150" required>
+            <br>
+            <label for="courses" class="required">Courses:</label><br>
+            <select id="courses" required>
+                <option value="">please select</option>
+                <option value=" 1">Course 1</option>
+                <option value="2">Course 2</option>
+                <option value="3">Course 3</option>
+                <option value="4">Course 4</option>
+                <option value="5">Course 5</option>
+                <option value="6">Course 6</option>
+                <option value="7">Course 7</option>
+                <option value="8">Course 8</option>
+                <option value="9">Course 9</option>
+                <option value="10">Course 10</option>
+            </select>
+            <br>
+            <label for="message">additional Message:</label><br>
+            <textarea id="message" maxlength="2000" required></textarea>
+            <br>
+            <button type="submit">Submit application</button>
+            <button type="close">Clear field</button>
+        </div>
+    </form>
+</body>
+</html>
